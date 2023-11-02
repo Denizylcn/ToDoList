@@ -1,0 +1,225 @@
+:root{
+  ---background-color:linear-gradient(to right, #1a1a19, #0b8793);
+  ---wrapper-border-color: #3d8690;
+  ---text-color:azure;
+  ---alert-succes-color: linear-gradient(to right, #a8a850, #05b2c2);
+  ---alert-warning-color:linear-gradient(to right, #eb4b4b, #a2b3b4);
+  ---alert-warning-full-color:linear-gradient(to right, #77c5ca, #a2b3b4);
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    display: flex;
+     height: 100vh;
+    flex-direction: column;
+    row-gap: 10px;
+    align-items: center;
+    justify-content: center;
+    
+    background: var(---background-color);
+   
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    /* border: 5px solid rgb(182, 143, 143) ;  */
+    border: 5px solid var(---wrapper-border-color);
+    border-radius: 10px;
+    width: 500px;
+    height: 70vh;
+    margin: 0;
+    padding: 0;
+
+   
+  
+}
+.addlist
+{  display: flex;
+    margin-top: 10px;
+    margin-left: 25px;
+    align-items: center;
+    justify-content: center;
+}
+.addtext{
+    width: 350px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: transparent;
+    font-size: large;
+    color: var(---text-color);
+    
+
+}
+
+.bi-plus-circle{
+    margin-left: 5px;
+    font-size: 25px;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+.remove-all{
+    background-color: transparent;
+    color:black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-left: 5px;
+    height: 30px;
+    border-radius: 30%;
+    
+}
+.header{
+ text-align: center;
+ 
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+
+.content-wrapper{
+    margin: 5px;
+ 
+}
+.content{
+    width: 450px;
+    font-style: italic;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.content ol{
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+   
+    
+   
+}
+.input{
+    position: absolute;
+    left: 10px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid green;
+    border: 2px solid var(---wrapper-border-color);
+    cursor: pointer;
+    margin-right: 10px;
+    
+}
+
+ol li{
+    display: flex;
+    border: 1px solid rgb(202, 202, 231);
+    border-radius: 10px;
+    padding: 1px;
+    justify-content: space-around;
+    align-items: center;
+    width: 450px;
+    height: 30px;
+   position: relative;
+   margin-bottom: -1px;
+    
+
+}
+.wrapper_paragraph{
+    left: 100px;
+    position: absolute;
+   
+    font-weight: bolder;
+    text-size-adjust: inherit;
+
+}
+.wrapper_paragraph.active{
+    margin-right: 10px;
+    
+    
+}
+
+.section{
+    width:300px;
+    
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        text-transform: uppercase;
+}
+
+.input.active {
+background-color: green;
+background-color: var(---wrapper-border-color)
+
+}
+.input.active ~.wrapper_paragraph {
+     opacity: 0.5;
+    text-decoration: line-through;
+}
+
+
+.days{
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+/*! alert css */
+
+.alert-wrapper{
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+}
+
+.alert-success,
+.alert-warning,
+.alert-warning-full{
+    padding: 1rem;
+    
+    font-weight: bold;
+    width: 25rem;
+    text-align: center;
+    display: none;
+    /* background-color:  rgb(182, 143, 143); */
+    border-radius: 12px;
+    margin-right: 5px;
+
+}
+
+.alert-warning{
+                       background-color: #5ebe92;
+    border-radius: 12px;
+    margin-right: 5px;
+    color: white    ;
+    background: var(---alert-warning-color)
+}
+
+
+
+
+
+
+.alert-warning-full{
+    background: var(---alert-warning-full-color );
+    color:#0e0f0f ;
+
+    
+
+
+}
+
+.alert-success{
+    
+    border-radius: 12px;
+    margin-right: 5px;
+    color: white    ;
+    background: var(---alert-succes-color);
+    background: linear-gradient(to right, #a8a850, #05b2c2)
+}
+/*! alert css */
